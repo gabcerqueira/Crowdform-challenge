@@ -1,13 +1,14 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import DefaultScreenContainer from '../../components/defaultScreenContainer/DefaultScreenContainer';
 
 type Props = {};
 
 const Login = (props: Props) => {
   return (
-    <View style={styles.container}>
+    <DefaultScreenContainer>
       <Text>Login</Text>
-    </View>
+    </DefaultScreenContainer>
   );
 };
 
