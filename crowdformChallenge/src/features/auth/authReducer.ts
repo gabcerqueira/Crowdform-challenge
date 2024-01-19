@@ -1,7 +1,7 @@
 import {createReducer} from '@reduxjs/toolkit';
 import {User} from '../../models/user/User';
 import {UserRegistration} from '../../models/user/UserRegistration';
-import {login} from './authActions';
+import {createAccount, login} from './authActions';
 
 interface AuthState {
   isUserAuthenticated: boolean;
@@ -20,16 +20,33 @@ export const initialState: AuthState = {
 export const authReducer = createReducer(initialState, builder => {
   builder.addCase(login.pending, state => ({
     ...state,
-    monsters: [],
+    isLoading: true,
   }));
 
   builder.addCase(login.rejected, state => ({
     ...state,
-    monsters: [],
+    isLoading: false,
   }));
 
   builder.addCase(login.fulfilled, (state, action) => ({
     ...state,
-    monsters: action.payload,
+    isLoading: false,
+    User: action.payload,
+    isUserAuthenticated: true,
+  }));
+  builder.addCase(createAccount.pending, state => ({
+    ...state,
+    isLoading: true,
+  }));
+
+  builder.addCase(createAccount.rejected, state => ({
+    ...state,
+    isLoading: false,
+  }));
+
+  builder.addCase(createAccount.fulfilled, (state, action) => ({
+    ...state,
+    isLoading: false,
+    lastCreatedUser: action.payload,
   }));
 });
