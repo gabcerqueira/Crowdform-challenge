@@ -7,4 +7,5 @@ export const colors = {
   yellow: '#FFAF2A',
   ice: '#F2F1F9',
   cardBackground: '#E0E0E0 ',
+  background: '#ffff',
 };

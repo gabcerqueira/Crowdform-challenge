@@ -4,6 +4,7 @@ import {createStackNavigator} from '@react-navigation/stack';
 // <-- Screens -->
 import Login from '../../screens/login/Login';
 import SignUp from '../../screens/signUp/SignUp';
+import {colors} from '../../style/constants/colors';
 
 export type AuthStackParamList = {
   Login: undefined;
@@ -18,13 +19,20 @@ function AuthNavigation() {
       initialRouteName="Login"
       screenOptions={({navigation, route}) => ({
         headerShown: true,
-        headerTitleAlign: 'left',
+        headerTitleAlign: 'center',
       })}>
       <AuthStack.Screen
         name="Login"
         component={Login}
         options={{
-          headerShown: false,
+          headerShown: true,
+
+          headerStyle: {
+            backgroundColor: colors.primary,
+            justifyContent: 'center',
+            height: 120,
+          },
+          headerTintColor: colors.ice,
         }}
       />
       <AuthStack.Screen

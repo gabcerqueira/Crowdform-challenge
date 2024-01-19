@@ -12,4 +12,4 @@ export const login = createAsyncThunk<User, UserCredentials>(
 export const createAccount = createAsyncThunk<
   UserRegistration,
   UserRegistration
->('auth/login', authService.createAccount);
+>('auth/createAccount', authService.createAccount);

@@ -5,7 +5,7 @@ type Props = {};
 
 const Login = (props: Props) => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>Login</Text>
     </View>
   );
@@ -13,4 +13,10 @@ const Login = (props: Props) => {
 
 export default Login;
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    borderTopRightRadius: 30,
+  },
+});
