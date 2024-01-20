@@ -10,14 +10,15 @@ import {
 
 type Props = {
   children: ReactNode;
+  height?: number;
 };
 
-const DefaultScreenContainer = ({children}: Props) => {
+const DefaultScreenContainer = ({children, height = 30}: Props) => {
   return (
     <Container>
       <BarsContainer>
-        <BarStyle />
-        <BarStyleRounded />
+        <BarStyle height={height} />
+        <BarStyleRounded height={height} />
       </BarsContainer>
       <ScreenContainer>{children}</ScreenContainer>
     </Container>

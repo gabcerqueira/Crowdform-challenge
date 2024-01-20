@@ -5,14 +5,18 @@ export const Container = styled.View`
   flex: 1;
 `;
 
-export const BarStyle = styled.View`
-  height: 30px;
+type BarProps = {
+  height?: number;
+};
+
+export const BarStyle = styled.View<BarProps>`
+  height: ${({height}) => `${height}px`};
   width: 100%;
   background-color: ${colors.primary};
 `;
 
-export const BarStyleRounded = styled.View`
-  height: 30px;
+export const BarStyleRounded = styled.View<BarProps>`
+  height: ${({height}) => `${height}px`};
   width: 100%;
   background-color: ${colors.ice};
   border-top-right-radius: 30px;

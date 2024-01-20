@@ -14,6 +14,7 @@ interface ButtonProps {
   disabled?: boolean;
   containerStyle?: ViewStyle;
   textStyle?: TextStyle;
+  type?: 'primary' | 'secondary';
 }
 
 const CustomButton: React.FC<ButtonProps> = ({
@@ -22,11 +23,13 @@ const CustomButton: React.FC<ButtonProps> = ({
   disabled = false,
   containerStyle,
   textStyle,
+  type = 'primary',
 }) => {
   return (
     <TouchableOpacity
       style={[
         styles.buttonContainer,
+        {backgroundColor: colors[type]},
         containerStyle,
         disabled && styles.disabled,
       ]}
@@ -39,7 +42,6 @@ const CustomButton: React.FC<ButtonProps> = ({
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    backgroundColor: colors.primary,
     borderRadius: 10,
     paddingVertical: 10,
     paddingHorizontal: 20,

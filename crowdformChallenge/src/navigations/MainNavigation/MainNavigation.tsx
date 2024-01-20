@@ -35,12 +35,17 @@ function MainNavigation() {
           headerStyle: {
             backgroundColor: colors.primary,
 
-            height: 120,
+            height: 200,
           },
           headerTintColor: colors.ice,
           headerTitle: () => (
             <View
-              style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+              style={{
+                flex: 1,
+                justifyContent: 'center',
+                alignItems: 'center',
+                paddingBottom: 70,
+              }}>
               <Text
                 style={{textAlign: 'center', color: colors.ice, fontSize: 14}}>
                 Current Account
