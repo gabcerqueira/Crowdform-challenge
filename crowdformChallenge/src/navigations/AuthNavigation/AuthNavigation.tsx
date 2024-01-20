@@ -29,7 +29,7 @@ function AuthNavigation() {
 
           headerStyle: {
             backgroundColor: colors.primary,
-            justifyContent: 'center',
+
             height: 120,
           },
           headerTintColor: colors.ice,
@@ -38,7 +38,15 @@ function AuthNavigation() {
       <AuthStack.Screen
         name="SignUp"
         component={SignUp}
-        options={{headerShown: false}}
+        options={{
+          headerShown: true,
+          headerStyle: {
+            backgroundColor: colors.primary,
+
+            height: 120,
+          },
+          headerTintColor: colors.ice,
+        }}
       />
     </AuthStack.Navigator>
   );

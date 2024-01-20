@@ -6,17 +6,17 @@ export const Container = styled.View`
 `;
 
 export const BarStyle = styled.View`
-  height: 50px;
+  height: 30px;
   width: 100%;
   background-color: ${colors.primary};
 `;
 
 export const BarStyleRounded = styled.View`
-  height: 50px;
+  height: 30px;
   width: 100%;
   background-color: ${colors.ice};
-  border-top-right-radius: 40px;
-  border-top-left-radius: 40px;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
   position: absolute;
   top: 0;
 `;
@@ -27,4 +27,9 @@ export const BarsContainer = styled.View`
   left: 0;
   right: 0;
   z-index: 2;
+`;
+
+export const ScreenContainer = styled.View`
+  flex: 1;
+  padding: 30px 20px 0;
 `;

@@ -1,6 +1,12 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React, {ReactNode} from 'react';
-import {BarStyle, BarStyleRounded, BarsContainer, Container} from './styles';
+import {
+  BarStyle,
+  BarStyleRounded,
+  BarsContainer,
+  Container,
+  ScreenContainer,
+} from './styles';
 
 type Props = {
   children: ReactNode;
@@ -13,8 +19,7 @@ const DefaultScreenContainer = ({children}: Props) => {
         <BarStyle />
         <BarStyleRounded />
       </BarsContainer>
-
-      {children}
+      <ScreenContainer>{children}</ScreenContainer>
     </Container>
   );
 };
