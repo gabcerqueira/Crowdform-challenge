@@ -30,6 +30,7 @@ const SignUp = (props: Props) => {
     console.log(data);
 
     dispatch(createAccount(data));
+    navigation.navigate('Login');
   };
 
   const handleLoginNavigation = () => navigation.navigate('Login');
